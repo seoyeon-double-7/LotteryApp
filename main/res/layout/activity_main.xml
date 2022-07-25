@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lottery_result_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="980회 당첨 결과"
+        android:textAlignment="center"
+        android:textColor="#E17F7F"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/lotto_nums"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="228dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/lottery_result_txt"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/create_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="#1B1917"
+        android:text="번호 생성"
+        android:textColor="#CA905E"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lotto_nums" />
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="#1B1917"
+        android:text="번호 저장"
+        android:textColor="#CA905E"
+        app:layout_constraintStart_toEndOf="@+id/create_btn"
+        app:layout_constraintTop_toBottomOf="@+id/lotto_nums" />
+
+    <Button
+        android:id="@+id/chk_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#1B1917"
+        android:text="번호 확인"
+        android:textColor="#CA905E"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_btn" />
+
+    <Button
+        android:id="@+id/winning_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#1B1917"
+        android:text="당첨번호"
+        android:textColor="#CA905E"
+        app:layout_constraintStart_toEndOf="@+id/chk_btn"
+        app:layout_constraintTop_toBottomOf="@+id/save_btn" />
+
+    <TextView
+        android:id="@+id/lottery_date_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="2022년 07월 25일"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottery_result_txt" />
+
+    <ImageView
+        android:id="@+id/lottery_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/lotto_nums"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottery_date_txt"
+        app:layout_constraintVertical_bias="0.414"
+        app:srcCompat="@drawable/lottery" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
